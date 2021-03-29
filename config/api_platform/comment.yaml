@@ -1,0 +1,7 @@
+App\Entity\Comment:
+  attributes:
+    normalization_context:
+      groups: 'comment:read'
+    collection:
+      pagination:
+        enabled: false

@@ -1,0 +1,101 @@
+#login {
+  height: 100vh;
+  background: url("../img/bg-login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 3rem black;
+}
+
+#login form {
+  background: radial-gradient(whitesmoke, transparent);
+  width: 80%;
+  padding: 2rem;
+}
+
+main {
+  height: 100vh;
+  overflow: scroll;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+#admin {
+  background: url("../img/bg-login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+#comment {
+  background: url("../img/bg-comment.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+#upload {
+  background: url("../img/bg-download.jpg");
+  overflow: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+#uploadFile {
+  background-color: whitesmoke;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#uploadFile input {
+  margin: 1rem;
+}
+#contact {
+  background: url("../img/bg-contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: scroll;
+  width: 100%;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: 0.5em;
+}
+
+.custom-file-label::after {
+  display: none;
+}

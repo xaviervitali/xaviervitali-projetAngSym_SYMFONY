@@ -1,0 +1,117 @@
+{% extends 'basewithnav.html.twig' %}
+
+{% block title %}Interface d'administration Apel STDA
+{% endblock %}
+{% block body %}
+	<div id="admin">
+		<h1 class="text-center my-5 text-primary">Bienvenue dans l'interface d'administration de l'APEL STDA</h1>
+		{% if usersAwaiting %}
+			<h4 class="m-3">
+				Utilisateurs en Attente d'accrédidaton ({{usersAwaiting | length}})
+			</h4>
+
+
+			<table class="table text-center table-striped table-light" data-toggle="table" data-filter-control="true" data-show-export="true" data-click-to-select="true">
+				<thead class="thead-dark">
+					<tr>
+						<th data-field="date" data-filter-control="input" data-sortable="true">Date d'inscription</th>
+						<th data-field="email" data-filter-control="input" data-sortable="true">Adresse Email</th>
+						<th data-field="gender" data-filter-control="input" data-sortable="true">Genre</th>
+						<th data-field="lastName" data-filter-control="input" data-sortable="true">Nom de famille</th>
+						<th data-field="firstName" data-filter-control="input" data-sortable="true">Prénom</th>
+						<th>Classe des enfants</th>
+						<th>Présentation</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for user in usersAwaiting %}
+						<tr>
+							<td>{{user.registeredAt | date("d/m/Y", "Europe/Paris")}}</td>
+							<td>{{user.email}}</td>
+							<td>{{user.gender}}</td>
+							<td>{{user.lastName}}</td>
+							<td>{{user.firstName}}</td>
+							<td>
+								{% for child in user.children %}
+									<div>{{child}}</div>
+								{% endfor %}
+							</td>
+							<td>{{user.about}}</td>
+							<td>
+									<a href="{{path('admin_allow_acces', {'id':user.id})}}">
+										<button class="btn btn-sm btn-success">Autoriser</button>
+									</a>
+
+									<a href="{{path('admin_edit_user', {'id':user.id})}}">
+										<button class="btn btn-sm btn-primary">Modifer</button>
+									</a>
+											<a href="{{path('admin_delete_user', {'id':user.id})}}">
+								<button class="btn btn-sm btn-danger">Supprimer</button>
+							</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<hr class="mb-2">
+		{% endif %}
+
+
+		<h4 class="m-3  ">
+			Liste des utilisateurs  ({{users | length}})
+		</h4>
+
+
+		<table class="table text-center table-striped table-light" data-toggle="table" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-search="true">
+			<thead class="thead-dark">
+				<tr>
+					<th data-field="date" data-filter-control="input" data-sortable="true">Date d'inscription</th>
+					<th data-field="email" data-filter-control="input" data-sortable="true">Adresse Email</th>
+					<th data-field="gender" data-filter-control="input" data-sortable="true">Genre</th>
+					<th data-field="lastName" data-filter-control="input" data-sortable="true">Nom de famille</th>
+					<th data-field="firstName" data-filter-control="input" data-sortable="true">Prénom</th>
+					<th>Classe des enfants</th>
+					<th>Roles</th>
+					<th>Actions</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				{% for user in users %}
+					<tr>
+						<td>{{user.registeredAt | date("d/m/Y", "Europe/Paris")}}</td>
+						<td>{{user.email}}</td>
+						<td>{{user.gender}}</td>
+						<td>{{user.lastName}}</td>
+						<td>{{user.firstName}}</td>
+						<td>
+							{% for child in user.children %}
+								<div>{{child}}</div>
+							{% endfor %}
+						</td>
+						<td>
+							{% for role in user.roles %}
+
+
+								<div>{{role | role}}</div>
+							{% endfor %}
+						</td>
+
+						<td>
+							<a href="{{path('admin_edit_user', {'id':user.id})}}">
+								<button class="btn btn-sm btn-primary">Modifer</button>
+							</a>
+							<a href="{{path('admin_delete_user', {'id':user.id})}}">
+								<button class="btn btn-sm btn-danger">Supprimer</button>
+							</a>
+
+						</td>
+					</tr>
+
+				{% endfor %}
+			</tbody>
+
+		</table>
+	</div>
+{% endblock %}

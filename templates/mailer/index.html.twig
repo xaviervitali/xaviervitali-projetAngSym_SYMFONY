@@ -1,0 +1,7 @@
+<h1>Un article a été ajouté !</h1>
+
+<p>Bonjour  {{user.gender}}  {{user.firstName}}  {{user.lastName | upper }}.</p>
+
+<p>Comme vous l'avez souhaité, nous vous informons qu'un nouel article vient d'être publié par {{article.author.firstName}} {{article.author.lastName}}.</p>
+
+<p>Il s'agit de  <a href="localhost:4200/article/{{article.id}}" >{{article.title}}</a> dans la categorie {{article.category.title}}.</p>

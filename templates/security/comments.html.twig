@@ -1,0 +1,67 @@
+{% extends 'basewithnav.html.twig' %}
+
+{% block title %}Interface d'administration Apel STDA{% endblock %}
+{% block body %}
+<div id="comment">
+<h1 class="text-center my-5 text-primary">Bienvenue dans l'interface d'administration des commentaires bloqués</h1>
+<h4 class="mt-3">
+Commentaires bloqués
+</h4    >
+
+
+<table class="table text-center table-striped table-light"
+			 data-toggle="table"
+			 data-filter-control="true" 
+			 data-show-export="true"
+			 data-click-to-select="true"
+             >
+<thead class="thead-dark">
+<tr>
+<th data-field="date" data-filter-control="input" data-sortable="true">Date</th>
+    <th data-field="article" data-filter-control="input" data-sortable="true">Article</th>
+    <th data-field="de" data-filter-control="input" data-sortable="true" >De</th>
+    <th data-field="author" data-filter-control="input" data-sortable="true">Auteur</th>
+    <th data-field="comment" data-filter-control="input" data-sortable="true">Commentaire</th>
+    <th data-field="blocked" data-filter-control="input" data-sortable="true">Bloqué par</th>
+    <th >Roles</th>
+    <th >Actions</th>
+</tr>
+</thead>
+<tbody>
+{% for comment in blockedComments %}
+{% if comment.blocked %}
+<tr>
+    <td>{{comment.createdAt | date("d/m/Y", "Europe/Paris")}}</td>
+    <td>{{comment.article.title}}</td>
+    <td>{{comment.article.author.firstName}} {{comment.article.author.lastName}}</td>
+    <td>{{comment.author.firstName}} {{comment.author.lastName}}</td>
+    <td>{{comment.content}}</td>
+    <td>
+    <p>
+    {{comment.blocked.firstName}} {{comment.blocked.lastName}}
+    </p>
+   
+    </td>
+<td>
+    <p>
+    {% for role in comment.blocked.roles %}
+    {{role | role}}
+    
+    {% endfor %}
+    </p></td>
+ 
+    <td>
+    <div class="input-group">
+         <a href="{{path('comment_delete', {'id':comment.id})}}"> <button class="btn btn-small btn-danger">Supprimer</button></a>
+
+  
+<a href="{{path('comment_allow', {'id':comment.id})}}">    <button class="btn btn-small btn-success">Débloquer</button></a> 
+    </td>
+</tr>   
+
+{% endif %}
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}

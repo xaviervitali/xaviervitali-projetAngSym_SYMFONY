@@ -1,0 +1,298 @@
+<?php //App.Entity.User
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotNull'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotNull')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Email'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Email')),
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Length'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Length')),
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        clone $p['Symfony\\Component\\Validator\\Constraints\\Length'],
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        clone $p['Symfony\\Component\\Validator\\Constraints\\Length'],
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotNull'],
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\User',
+                'email',
+                5 => 'password',
+                9 => 'gender',
+                11 => 'lastName',
+                15 => 'firstName',
+                19 => 'children',
+            ],
+            'defaultGroup' => [
+                'User',
+            ],
+            'members' => [
+                [
+                    'email' => [
+                        $o[1],
+                    ],
+                    'password' => [
+                        $o[5],
+                    ],
+                    'gender' => [
+                        $o[9],
+                    ],
+                    'lastName' => [
+                        $o[11],
+                    ],
+                    'firstName' => [
+                        $o[15],
+                    ],
+                    'children' => [
+                        $o[19],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'email' => $o[1],
+                    'password' => $o[5],
+                    'gender' => $o[9],
+                    'lastName' => $o[11],
+                    'firstName' => $o[15],
+                    'children' => $o[19],
+                ],
+            ],
+            'constraints' => [
+                [
+                    $o[22],
+                ],
+                [
+                    $o[2],
+                    $o[3],
+                    $o[4],
+                ],
+                5 => [
+                    $o[6],
+                    $o[7],
+                    $o[8],
+                ],
+                9 => [
+                    $o[10],
+                ],
+                11 => [
+                    $o[12],
+                    $o[13],
+                    $o[14],
+                ],
+                15 => [
+                    $o[16],
+                    $o[17],
+                    $o[18],
+                ],
+                19 => [
+                    $o[20],
+                    $o[21],
+                ],
+            ],
+            'constraintsByGroup' => [
+                [
+                    'Default' => [
+                        $o[22],
+                    ],
+                    'User' => [
+                        $o[22],
+                    ],
+                ],
+                [
+                    'Default' => [
+                        $o[2],
+                        $o[3],
+                        $o[4],
+                    ],
+                    'User' => [
+                        $o[2],
+                        $o[3],
+                        $o[4],
+                    ],
+                ],
+                5 => [
+                    'Default' => [
+                        $o[6],
+                        $o[7],
+                        $o[8],
+                    ],
+                    'User' => [
+                        $o[6],
+                        $o[7],
+                        $o[8],
+                    ],
+                ],
+                9 => [
+                    'Default' => [
+                        $o[10],
+                    ],
+                    'User' => [
+                        $o[10],
+                    ],
+                ],
+                11 => [
+                    'Default' => [
+                        $o[12],
+                        $o[13],
+                        $o[14],
+                    ],
+                    'User' => [
+                        $o[12],
+                        $o[13],
+                        $o[14],
+                    ],
+                ],
+                15 => [
+                    'Default' => [
+                        $o[16],
+                        $o[17],
+                        $o[18],
+                    ],
+                    'User' => [
+                        $o[16],
+                        $o[17],
+                        $o[18],
+                    ],
+                ],
+                19 => [
+                    'Default' => [
+                        $o[20],
+                        $o[21],
+                    ],
+                    'User' => [
+                        $o[20],
+                        $o[21],
+                    ],
+                ],
+            ],
+            'class' => [
+                1 => 'App\\Entity\\User',
+                5 => 'App\\Entity\\User',
+                9 => 'App\\Entity\\User',
+                11 => 'App\\Entity\\User',
+                15 => 'App\\Entity\\User',
+                19 => 'App\\Entity\\User',
+            ],
+            'property' => [
+                1 => 'email',
+                5 => 'password',
+                9 => 'gender',
+                11 => 'lastName',
+                15 => 'firstName',
+                19 => 'children',
+            ],
+            'message' => [
+                2 => 'L\'adresse email ne peut etre vide',
+                'l\'adresse email est obligatoire',
+                'L\'adresse email semble erronnée',
+                6 => 'Le mot de passe ne peut etre vide',
+                'Le mot de passe est obligatoire',
+                10 => 'Le genre ne peut etre vide',
+                12 => 'Le nom de famille ne peut etre vide',
+                'Le nom de famille est obligatoire',
+                16 => 'Le prénom ne peut etre vide',
+                'Le prénom est obligatoire',
+                20 => 'La classe du/des enfants ne peut etre vide',
+                'La classe du/des enfants est obligatoire',
+                'cette adresse email est déjà utilisée',
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                6 => [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                10 => [
+                    'Default',
+                    'User',
+                ],
+                12 => [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                16 => [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                20 => [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+                [
+                    'Default',
+                    'User',
+                ],
+            ],
+            'minMessage' => [
+                8 => 'Le mot de passe doit contenir au moins 8 caracteres',
+                14 => 'Le nom de famille doit contenir au moins 2 caracteres',
+                18 => 'Le prénom doit contenir au moins 2 caracteres',
+            ],
+            'min' => [
+                8 => 8,
+                14 => 2,
+                18 => 2,
+            ],
+            'fields' => [
+                22 => 'email',
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

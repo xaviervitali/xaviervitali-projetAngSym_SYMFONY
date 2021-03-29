@@ -1,0 +1,121 @@
+<?php //%255B7fd4313788b3b0b7e250ff16f496ecb3%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT f0_.id AS id_0, f0_.file_uploaded_name AS file_uploaded_name_1, f0_.title AS title_2, f0_.updated_at AS updated_at_3, u1_.id AS id_4, u1_.email AS email_5, u1_.roles AS roles_6, u1_.password AS password_7, u1_.gender AS gender_8, u1_.last_name AS last_name_9, u1_.first_name AS first_name_10, u1_.children AS children_11, u1_.email_notification AS email_notification_12, u1_.registered_at AS registered_at_13, u1_.granted AS granted_14, u1_.about AS about_15, f0_.added_by_id AS added_by_id_16 FROM file_upload f0_ LEFT JOIN user u1_ ON f0_.added_by_id = u1_.id ORDER BY f0_.updated_at DESC LIMIT 30',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'o' => 'App\\Entity\\FileUpload',
+                    'addedBy_a1' => 'App\\Entity\\User',
+                ],
+            ],
+            'relationMap' => [
+                2 => [
+                    'addedBy_a1' => 'addedBy',
+                ],
+            ],
+            'parentAliasMap' => [
+                2 => [
+                    'addedBy_a1' => 'o',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'file_uploaded_name_1' => 'fileUploadedName',
+                    'title_2' => 'title',
+                    'updated_at_3' => 'updatedAt',
+                    'id_4' => 'id',
+                    'email_5' => 'email',
+                    'roles_6' => 'roles',
+                    'password_7' => 'password',
+                    'gender_8' => 'gender',
+                    'last_name_9' => 'lastName',
+                    'first_name_10' => 'firstName',
+                    'children_11' => 'children',
+                    'email_notification_12' => 'emailNotification',
+                    'registered_at_13' => 'registeredAt',
+                    'granted_14' => 'granted',
+                    'about_15' => 'about',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'added_by_id_16' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'o' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'added_by_id_16' => 'added_by_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'o',
+                    'file_uploaded_name_1' => 'o',
+                    'title_2' => 'o',
+                    'updated_at_3' => 'o',
+                    'id_4' => 'addedBy_a1',
+                    'email_5' => 'addedBy_a1',
+                    'roles_6' => 'addedBy_a1',
+                    'password_7' => 'addedBy_a1',
+                    'gender_8' => 'addedBy_a1',
+                    'last_name_9' => 'addedBy_a1',
+                    'first_name_10' => 'addedBy_a1',
+                    'children_11' => 'addedBy_a1',
+                    'email_notification_12' => 'addedBy_a1',
+                    'registered_at_13' => 'addedBy_a1',
+                    'granted_14' => 'addedBy_a1',
+                    'about_15' => 'addedBy_a1',
+                    'added_by_id_16' => 'o',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\FileUpload',
+                    'file_uploaded_name_1' => 'App\\Entity\\FileUpload',
+                    'title_2' => 'App\\Entity\\FileUpload',
+                    'updated_at_3' => 'App\\Entity\\FileUpload',
+                    'id_4' => 'App\\Entity\\User',
+                    'email_5' => 'App\\Entity\\User',
+                    'roles_6' => 'App\\Entity\\User',
+                    'password_7' => 'App\\Entity\\User',
+                    'gender_8' => 'App\\Entity\\User',
+                    'last_name_9' => 'App\\Entity\\User',
+                    'first_name_10' => 'App\\Entity\\User',
+                    'children_11' => 'App\\Entity\\User',
+                    'email_notification_12' => 'App\\Entity\\User',
+                    'registered_at_13' => 'App\\Entity\\User',
+                    'granted_14' => 'App\\Entity\\User',
+                    'about_15' => 'App\\Entity\\User',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

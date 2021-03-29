@@ -1,0 +1,3 @@
+<?php //route_name_bcb7f6e7e7fa26b4313ccc23f7c8cba5
+
+return [PHP_INT_MAX, 'api_file_uploads_GET_item'];

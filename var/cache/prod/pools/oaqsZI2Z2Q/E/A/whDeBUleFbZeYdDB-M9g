@@ -1,0 +1,192 @@
+<?php //%255BApp%255CEntity%255CComment%2524CLASSMETADATA%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Comment',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\Comment',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\CommentRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'content' => [
+                        'fieldName' => 'content',
+                        'type' => 'text',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'content',
+                    ],
+                    'createdAt' => [
+                        'fieldName' => 'createdAt',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'created_at',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'content' => 'content',
+                    'created_at' => 'createdAt',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'content' => 'content',
+                    'createdAt' => 'created_at',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'comment',
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'author' => [
+                        'fieldName' => 'author',
+                        'joinColumns' => [
+                            [
+                                'name' => 'author_id',
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [],
+                        'inversedBy' => 'article',
+                        'targetEntity' => 'App\\Entity\\User',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\Comment',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'author_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'author_id' => 'author_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'author_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                    'article' => [
+                        'fieldName' => 'article',
+                        'joinColumns' => [
+                            [
+                                'name' => 'article_id',
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [],
+                        'inversedBy' => 'comments',
+                        'targetEntity' => 'App\\Entity\\Article',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\Comment',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'article_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'article_id' => 'article_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'article_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                    'blocked' => [
+                        'fieldName' => 'blocked',
+                        'joinColumns' => [
+                            [
+                                'name' => 'blocked_id',
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [],
+                        'inversedBy' => 'comments',
+                        'targetEntity' => 'App\\Entity\\User',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\Comment',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'blocked_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'blocked_id' => 'blocked_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'blocked_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

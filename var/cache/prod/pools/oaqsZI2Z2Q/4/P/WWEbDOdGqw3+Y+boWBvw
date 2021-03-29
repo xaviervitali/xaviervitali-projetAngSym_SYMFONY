@@ -1,0 +1,48 @@
+<?php //%255B389bd04e913b85ca56c4523a9bab073a%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'category_p1' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT DISTINCT a0_.id AS id_0, a0_.updated_at AS updated_at_1 FROM article a0_ LEFT JOIN category c1_ ON a0_.category_id = c1_.id LEFT JOIN user u2_ ON a0_.author_id = u2_.id LEFT JOIN comment c3_ ON a0_.id = c3_.article_id LEFT JOIN user u4_ ON c3_.author_id = u4_.id LEFT JOIN user u5_ ON c3_.blocked_id = u5_.id WHERE a0_.id IN (SELECT a6_.id FROM article a6_ LEFT JOIN category c7_ ON a6_.category_id = c7_.id LEFT JOIN user u8_ ON a6_.author_id = u8_.id LEFT JOIN comment c9_ ON a6_.id = c9_.article_id LEFT JOIN user u10_ ON c9_.author_id = u10_.id LEFT JOIN user u11_ ON c9_.blocked_id = u11_.id WHERE a6_.category_id = ?) ORDER BY a0_.updated_at DESC LIMIT 30',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'id_0' => '_dctrn_id',
+                    'updated_at_1' => '_dctrn_ord0',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'id_0' => 'integer',
+                    'updated_at_1' => 'datetime',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

@@ -1,0 +1,107 @@
+<?php //%255B1d6713cf330fdaa28ef42fef482898b3%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'dpid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT c0_.id AS id_0, c0_.title AS title_1, a1_.id AS id_2, a1_.title AS title_3, a1_.content AS content_4, a1_.created_at AS created_at_5, a1_.updated_at AS updated_at_6, a1_.slug AS slug_7, a1_.category_id AS category_id_8, a1_.author_id AS author_id_9 FROM category c0_ LEFT JOIN article a1_ ON c0_.id = a1_.category_id WHERE c0_.id IN (?) ORDER BY c0_.id ASC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'o' => 'App\\Entity\\Category',
+                    'articles_a1' => 'App\\Entity\\Article',
+                ],
+            ],
+            'relationMap' => [
+                2 => [
+                    'articles_a1' => 'articles',
+                ],
+            ],
+            'parentAliasMap' => [
+                2 => [
+                    'articles_a1' => 'o',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'title_1' => 'title',
+                    'id_2' => 'id',
+                    'title_3' => 'title',
+                    'content_4' => 'content',
+                    'created_at_5' => 'createdAt',
+                    'updated_at_6' => 'updatedAt',
+                    'slug_7' => 'slug',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'category_id_8' => 'integer',
+                    'author_id_9' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'o' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'category_id_8' => 'category_id',
+                    'author_id_9' => 'author_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'o',
+                    'title_1' => 'o',
+                    'id_2' => 'articles_a1',
+                    'title_3' => 'articles_a1',
+                    'content_4' => 'articles_a1',
+                    'created_at_5' => 'articles_a1',
+                    'updated_at_6' => 'articles_a1',
+                    'slug_7' => 'articles_a1',
+                    'category_id_8' => 'articles_a1',
+                    'author_id_9' => 'articles_a1',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Category',
+                    'title_1' => 'App\\Entity\\Category',
+                    'id_2' => 'App\\Entity\\Article',
+                    'title_3' => 'App\\Entity\\Article',
+                    'content_4' => 'App\\Entity\\Article',
+                    'created_at_5' => 'App\\Entity\\Article',
+                    'updated_at_6' => 'App\\Entity\\Article',
+                    'slug_7' => 'App\\Entity\\Article',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

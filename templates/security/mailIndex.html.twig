@@ -1,0 +1,70 @@
+{% extends 'basewithnav.html.twig' %}
+
+{% block title %}Interface d'administration Apel STDA{% endblock %}
+
+{% block body %}
+
+
+<div id="contact" >
+<h1 class="text-center my-5 text-primary">Bienvenue sur l'espace contact</h1>
+    <div class="d-flex justify-content-around align-items-stretch flex-wrap" >
+        <div class="bg-light  w-100">
+            {# <h2 class="mb-3 text-center">Envoyé depuis le site</h2> #}
+            <table class="table text-center table-striped table-light">
+                <thead class="thead-dark">
+                    <th>Date d'envoi</th>
+                    <th>Emmeteur</th>
+                    <th>Role(s)</th>
+                    <th>Titre</th>
+                    <th>Corps</th>
+                    <th>Supprimer</th>
+                </thead>
+                <tbody>
+                    {% for mail in inbox %}
+                        <tr>
+                        <td>
+                        {{mail.createdAt | date("d/m/Y H:i")}}
+                        </td>
+                            <td>
+                        {{mail.sender.firstName}}
+                        {{mail.sender.lastName}}
+
+                        </td>
+                        <td>
+                        {% for role in mail.sender.roles %}
+                            <div>
+                            {{role |    role}}
+                            </div>
+                        {% endfor %}
+                        </td>
+                            <td>
+                        {{mail.title}}
+                        </td>
+                            <td>
+                        {{mail.content}} 
+                        </td>
+                        <td>
+                        <a href="{{path('admin_mail_delete', {'id':mail.id})}}" class="btn btn-danger btn-sm">Supprimer</a>       
+                        </td>
+                        </tr> 
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        {# <div class="bg-light p-3 col-5">
+        <h2 class="mb-3">Envoyer un email</h2> #}
+        {# <div>
+ 
+            {{form_start(form)}}
+            {{form_widget(form)}}
+            <button class="btn btn-success" type="submit">Envoyer le mail groupé</button> 
+            {{form_end(form)}}
+        </div> #}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

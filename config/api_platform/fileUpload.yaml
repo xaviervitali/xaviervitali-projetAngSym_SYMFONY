@@ -1,0 +1,13 @@
+App\Entity\FileUpload: 
+  attributes:
+    order: {"updatedAt":"DESC"} 
+
+    normalization_context:
+      groups: "file:read"
+    collection:
+      pagination:
+        enabled: false
+  collectionOperations: [GET]
+  itemOperations: [GET]
+
+

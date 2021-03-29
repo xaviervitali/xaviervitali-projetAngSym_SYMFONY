@@ -1,0 +1,70 @@
+<?php //%255BApp%255CEntity%255CFileUpload%2524uploadedFile%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\File'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\File')),
+        clone ($p['Symfony\\Component\\Serializer\\Annotation\\Groups'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Annotation\\Groups')),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\File'],
+    ],
+    null,
+    [
+        'Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField' => [
+            'mapping' => [
+                'fileUpload',
+            ],
+            'fileNameProperty' => [
+                'fileUploadedName',
+            ],
+        ],
+        'stdClass' => [
+            'mimeTypes' => [
+                1 => [
+                    'image/jpeg',
+                    'image/gif',
+                    'image/png',
+                    'video/mp4',
+                    'video/quicktime',
+                    'video/avi',
+                    'application/pdf',
+                    'application/msword',
+                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                    'application/vnd.oasis.opendocument.text',
+                ],
+            ],
+            'mimeTypesMessage' => [
+                1 => 'Wrong file type (jpg,gif,png,mp4,mov,avi,pdf,doc,docx,odt)',
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                ],
+                3 => [
+                    'Default',
+                ],
+            ],
+            'binaryFormat' => [
+                3 => false,
+            ],
+        ],
+        'Symfony\\Component\\Serializer\\Annotation\\Groups' => [
+            'groups' => [
+                2 => [
+                    'file:read',
+                ],
+            ],
+        ],
+        'Symfony\\Component\\Validator\\Constraints\\File' => [
+            'maxSize' => [
+                3 => 1000000000,
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[3],
+    ],
+    []
+); }];

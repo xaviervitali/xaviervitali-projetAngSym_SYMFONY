@@ -1,0 +1,8 @@
+App\Entity\Article:
+  attributes:
+    normalization_context:
+      groups: 'article:read'
+    collection:
+      pagination:
+        enabled: false
+    order: {"updatedAt":"DESC"}

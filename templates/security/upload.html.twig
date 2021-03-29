@@ -1,0 +1,62 @@
+{% extends 'basewithnav.html.twig' %}
+
+{% block title %}Interface d'administration Apel STDA
+{% endblock %}
+
+{% block body %}
+
+
+	<div id="upload">
+		<h1 class="text-center my-5 text-primary">Bienvenue sur l'espace telechargement</h1>
+		<div class="d-flex justify-content-around  align-items-stretch flex-wrap">
+			<div id="uploadFile" class="col-lg-8 col-md-12">
+				<h2 class="text-center">Fichiers déjà présent</h2>
+				<table class="table text-center table-striped table-light">
+					<thead class="thead-dark">
+						<th>Date de mise en ligne</th>
+						<th>Titre</th>
+						<th>Nom du fichier</th>
+						<th>Ajouter par</th>
+						<th>Supprimer</th>
+					</thead>
+					<tbody>
+						{% for upload in uploads %}
+							<tr>
+								<td>
+									{{upload.updatedAt | date("d/m/Y H:i")}}
+								</td>
+								<td>
+									{{upload.title}}
+								</td>
+								<td>
+									<a href="../assets/files/{{upload.fileUploadedName}}" target="_blank">
+										{{upload.fileUploadedName}}
+									</a>
+								</td>
+								<td>
+									{{upload.addedBy.firstName}}
+									{{upload.addedBy.lastName}}
+								</td>
+								<td>
+									<a href="{{path('admin_delete_file', {'id':upload.id})}}" class="btn btn-danger btn-sm">Supprimer</a>
+								</td>
+							</tr>
+						{% endfor %}
+						<tr></tr>
+					</tbody>
+
+				</table>
+
+			</div>
+			<div id="uploadFile" class="col-lg-4 col-md-12">
+				<h2 class="text-center">Televerser un fichier</h2>
+				{{form_start(form)}}
+				{{form_widget(form.title)}}
+				{{form_widget(form.uploadedFile)}}
+
+				<button class="btn btn-success btn-sm float-right" type="submit">Valider les modifications</button>
+				{{form_end(form)}}
+			</div>
+		</div>
+	</div>
+{% endblock %}

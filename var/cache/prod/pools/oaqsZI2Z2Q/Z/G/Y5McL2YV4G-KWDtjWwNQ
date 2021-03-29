@@ -1,0 +1,140 @@
+<?php //%255BApp%255CEntity%255CFileUpload%2524CLASSMETADATA%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\FileUpload',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\FileUpload',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\FileUploadRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'fileUploadedName' => [
+                        'fieldName' => 'fileUploadedName',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'file_uploaded_name',
+                    ],
+                    'title' => [
+                        'fieldName' => 'title',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'title',
+                    ],
+                    'updatedAt' => [
+                        'fieldName' => 'updatedAt',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'updated_at',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'file_uploaded_name' => 'fileUploadedName',
+                    'title' => 'title',
+                    'updated_at' => 'updatedAt',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'fileUploadedName' => 'file_uploaded_name',
+                    'title' => 'title',
+                    'updatedAt' => 'updated_at',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'file_upload',
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'addedBy' => [
+                        'fieldName' => 'addedBy',
+                        'joinColumns' => [
+                            [
+                                'name' => 'added_by_id',
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [],
+                        'inversedBy' => 'fileUploads',
+                        'targetEntity' => 'App\\Entity\\User',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\FileUpload',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'added_by_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'added_by_id' => 'added_by_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'added_by_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

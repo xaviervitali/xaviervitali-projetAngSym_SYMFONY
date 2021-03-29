@@ -1,0 +1,64 @@
+<?php //App_Entity_Comment
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+        clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Comment',
+                'id',
+                'content',
+                'author',
+                'article',
+                'createdAt',
+                'blocked',
+            ],
+            'attributesMetadata' => [
+                [
+                    'id' => $o[1],
+                    'content' => $o[2],
+                    'author' => $o[3],
+                    'article' => $o[4],
+                    'createdAt' => $o[5],
+                    'blocked' => $o[6],
+                ],
+            ],
+            'groups' => [
+                1 => [
+                    'article:read',
+                    'comment:read',
+                ],
+                [
+                    'article:read',
+                    'comment:read',
+                ],
+                [
+                    'article:read',
+                    'comment:read',
+                ],
+                [
+                    'comment:read',
+                ],
+                [
+                    'article:read',
+                    'comment:read',
+                ],
+                [
+                    'article:read',
+                    'comment:read',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
